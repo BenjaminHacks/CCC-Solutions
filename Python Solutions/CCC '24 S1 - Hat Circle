@@ -1,0 +1,14 @@
+y = int(input())
+mylist = []
+mylist1 = []
+mylist2 = []
+counter = 0
+for i in range(y):
+  mylist.append(int(input()))
+x = len(mylist)
+mylist1 = mylist[0:int(x/2)]
+mylist2 = mylist[int(x/2):len(mylist)]
+for i in range(len(mylist1)):
+  if mylist[i] == mylist2[i]:
+    counter += 1
+print(counter*2)

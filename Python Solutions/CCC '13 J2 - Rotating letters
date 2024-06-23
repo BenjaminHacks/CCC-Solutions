@@ -1,0 +1,14 @@
+x = input()
+count = 0
+wordlist = ["I", "O", "S", "H", "Z", "X", "N"]
+y = list(x)
+z = len(y)
+for i in y:
+  if i in wordlist:
+    count += 1
+  else:
+    break
+if count == z:
+  print("YES")
+else:
+  print("NO")

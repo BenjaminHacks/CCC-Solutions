@@ -1,0 +1,34 @@
+from collections import deque
+
+numStudents = int(input())
+
+adjacencyList = [[] for i in range(10005)]
+for i in range(numStudents):
+    x, y = map(int, input().split())
+    adjacencyList[x].append(y)
+
+while True:
+    firstPerson, secondPerson = map(int, input().split())
+    if firstPerson == 0 and secondPerson == 0:
+        break
+
+    q = deque()
+    visited = [False for i in range(10005)]
+    q.append(firstPerson)
+    inf = int(10**10)
+    distance = [inf for i in range(10005)]
+    distance[firstPerson] = 0
+
+    while len(q) > 0:
+        curPerson = q.popleft()
+        visited[curPerson] = True
+
+        for nxtPerson in adjacencyList[curPerson]:
+            if not visited[nxtPerson] and distance[nxtPerson] > distance[curPerson]+1:
+                distance[nxtPerson] = distance[curPerson]+1
+                q.append(nxtPerson)
+
+    if not visited[secondPerson]:
+        print("No")
+    else:
+        print("Yes", distance[secondPerson]-1)

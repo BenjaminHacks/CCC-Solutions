@@ -1,0 +1,10 @@
+a1, a2, a3 = int(input()), int(input()), int(input())
+b1, b2, b3 = int(input()), int(input()), int(input())
+answer1 = (a1*3)+(a2*2)+(a3*1)
+answer2 = (b1*3)+(b2*2)+(b3*1)
+if answer1 > answer2:
+  print("A")
+elif answer1 < answer2:
+  print("B")
+elif answer1 == answer2:
+  print("T")

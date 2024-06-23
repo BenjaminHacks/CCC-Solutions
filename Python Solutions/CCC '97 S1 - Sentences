@@ -1,0 +1,30 @@
+def solve():
+    num_subjects = int(input())
+    num_verbs = int(input())
+    num_objects = int(input())
+    
+    subjects = []
+    verbs = []
+    objects = []
+    
+    for i in range(num_subjects):
+        word = input()
+        subjects.append(word)
+        
+    for i in range(num_verbs):
+        word = input()
+        verbs.append(word)
+        
+    for i in range(num_objects):
+        word = input()
+        objects.append(word)
+
+    for a in range(len(subjects)):
+      for b in range(len(verbs)):
+        for c in range(len(objects)):
+
+          print(subjects[a], verbs[b], objects[c] + ".")
+
+n = int(input())
+for i in range(n):
+    solve()

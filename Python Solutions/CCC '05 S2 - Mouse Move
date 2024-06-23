@@ -1,0 +1,18 @@
+a, b = map(int, input().split())
+e = 0
+f = 0
+while True:
+  c,d = map(int, input().split())
+  e += c
+  f += d
+  if c == 0 and d == 0:
+    break
+  if e > a:
+    e = a
+  if e <= 0:
+    e = 0
+  if f > b:
+    f = b
+  if f <= 0:
+    f = 0
+  print(e, f)

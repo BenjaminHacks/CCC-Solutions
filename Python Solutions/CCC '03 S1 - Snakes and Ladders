@@ -1,0 +1,32 @@
+snakes = [54,90,99]
+resultsnakes = [19,48,77]
+ladder = [9,40,67]
+resultladder = [34,64,86]
+arr = []
+x = 1
+tracker = False
+while x != 100:
+  y = int(input())
+  if y < 2 or y > 12:
+    tracker = True 
+    break
+  x+=y
+  if x in snakes:
+    z = snakes.index(x)
+    x = resultsnakes[z]
+  elif x in ladder:
+    z = ladder.index(x)
+    x = resultladder[z]
+  if x == 100:
+    break
+  if x>100:
+    x-=y
+  arr.append(x)
+
+for i in arr:
+  print("You are now on square " + str(i))
+if tracker == False:
+  print("You are now on square 100")
+  print("You Win!")
+elif tracker == True:
+  print("You Quit!")

@@ -1,0 +1,21 @@
+import sys
+mylist = []
+answer = 0
+answer1 = 0
+for i in range(4):
+  rows = list(map(int, input().split()))
+  mylist.append(rows)
+
+if sum(mylist[0]) == sum(mylist[1]) == sum(mylist[2]) == sum(mylist[3]):
+  for i in range(len(mylist[0])):
+    n = 0
+    for j in range(len(mylist)):
+      n += mylist[j][i]
+  if n != sum(mylist[0]):
+    print("not magic")
+    sys.exit()
+
+  print("magic")
+
+else:
+  print("not magic")

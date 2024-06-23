@@ -1,0 +1,10 @@
+numofpeople = int(input())
+count = 0
+for i in range(numofpeople):
+  a, b = int(input()), int(input())
+  if a*5-b*3>40:
+   count += 1
+if count == numofpeople:
+  print(str(count)+"+")
+else:
+  print(count)

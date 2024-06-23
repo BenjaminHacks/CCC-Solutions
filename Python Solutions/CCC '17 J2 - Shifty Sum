@@ -1,0 +1,6 @@
+num = int(input())
+numadd = int(input())
+result = 0
+for i in range(numadd+1):
+  result += num * (10**i)
+print(result)

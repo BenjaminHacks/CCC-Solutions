@@ -1,0 +1,4 @@
+numofbig = int(input())
+numofsmall = int(input())
+total = numofbig*8+numofsmall*3
+print(total-28)

@@ -1,0 +1,19 @@
+def minp(x):
+    minpp = 1000000
+    d1 = 0
+    d2 = 0
+    for i in range(1,x+1):
+        if x%i == 0:
+            if (2*i + 2*(x/i) < minpp):
+                minpp = 2*i + 2*(x/i)
+                d1 = i
+                d2 = (x/i)
+            
+    return [minpp, d1, d2]
+
+while True:
+    c = int(input())
+    if (c == 0):
+        break
+    m = minp(c)
+    print("Minimum perimeter is " + str(int(m[0])) + " with dimensions " + str(m[1]) + " x " + str(int(m[2])))

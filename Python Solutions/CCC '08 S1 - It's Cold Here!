@@ -1,0 +1,12 @@
+mylist = []
+c = 10000000000000000
+d = ''
+while True:
+  a, b = input().split()
+  b = int(b)
+  if b < c:
+    c = b
+    d = a
+  if a == "Waterloo":
+    break
+print(d)

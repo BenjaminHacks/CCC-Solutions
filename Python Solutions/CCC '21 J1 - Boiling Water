@@ -1,0 +1,9 @@
+variableB = int(input())
+VariableP = 5*variableB-400
+print(VariableP)
+if VariableP < 100:
+  print("1")
+elif VariableP > 100:
+  print("-1")
+else:
+  print("0")

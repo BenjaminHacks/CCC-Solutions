@@ -1,0 +1,10 @@
+x = int(input())
+y = int(input())
+listofnums = []
+listofnums.append(x)
+listofnums.append(y)
+while True:
+  listofnums.append(listofnums[-2]-listofnums[-1])
+  if listofnums[-2] < listofnums[-1]:
+    break
+print(len(listofnums))

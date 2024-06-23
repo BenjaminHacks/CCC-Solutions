@@ -1,0 +1,17 @@
+n = int(input())
+yourAnswers = []
+teachersAnswers = []
+
+for i in range(n):
+    ans = input()
+    yourAnswers.append(ans)
+    
+for i in range(n):
+    ans = input()
+    teachersAnswers.append(ans)
+    
+correct = 0
+for i in range(n):
+    if yourAnswers[i] == teachersAnswers[i]:
+        correct += 1      
+print(correct)

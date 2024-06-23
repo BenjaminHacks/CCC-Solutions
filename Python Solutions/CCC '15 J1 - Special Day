@@ -1,0 +1,10 @@
+onth = 2
+day = 18
+x = int(input())
+y = int(input())
+if month >= x and day > y or month > x and day >= y or month > x and day > y or month > x and day < y:
+  print("Before")
+elif month <= x and day < y or month < x and day <= y or month < x and day < y or month < x and day > y:
+  print("After")
+elif month == x and day == y:
+  print("Special")

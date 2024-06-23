@@ -1,0 +1,17 @@
+y = int(input())
+
+
+mylist = input().split()
+mylist2 = input().split()
+counter = mylist.count("1") + mylist2.count("1")
+number = counter *3
+for i in range(len(mylist)):
+  if i >= 1:
+    if (mylist[i] == "1" and mylist[i-1] == "1"):
+      number -= 2
+    if (mylist2[i] == "1" and mylist2[i-1] == "1"):
+      number -= 2
+  if i % 2 == 0:
+    if (mylist[i] == "1" and mylist2[i] == "1"):
+      number -= 2
+print(number)

@@ -1,0 +1,11 @@
+first = int(input())
+second = int(input())
+listofwords = []
+listofwords2 = []
+for i in range(first):
+  listofwords.append(input())
+for i in range(second):
+  listofwords2.append(input())
+for i in listofwords:
+  for j in listofwords2:
+    print(i + " as " + j)

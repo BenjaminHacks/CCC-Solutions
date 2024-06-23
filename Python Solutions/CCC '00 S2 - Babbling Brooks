@@ -1,0 +1,25 @@
+x = int(input())
+mylist = []
+for i in range(x):
+  a = int(input())
+  mylist.append(a)
+
+while True:
+  z = int(input())
+  if z == 77:
+    break
+  if z == 99:
+    y = int(input())
+    prev = mylist[y-1]
+    number = int(input())
+    ans = mylist[y-1]*(number/100)
+    mylist[y-1] = ans
+    mylist.insert(y,prev-ans)
+  if z == 88:
+    y = int(input())
+    mylist[y-1] = mylist[y-1] + mylist[y]
+    del(mylist[y])
+
+for i in mylist:
+  i = int(i)
+  print(i, end = ' ')

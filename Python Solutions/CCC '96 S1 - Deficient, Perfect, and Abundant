@@ -1,0 +1,14 @@
+x = int(input())
+for i in range(x):
+  sum = 0
+  y = int(input())
+  for j in range(1,int(y/2)+1):
+    if y%j == 0:
+      sum += j
+
+  if sum < y:
+    print(f"{y} is a deficient number.")
+  elif sum > y:
+    print(f"{y} is an abundant number.")
+  elif sum == y:
+    print(f"{y} is a perfect number.")

@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int a;
+int b;
+int c;
+
+int main() {
+  cin >> a >> b >> c;
+  vector <int> nums = {a,b,c};
+
+  sort(nums.begin(), nums.end());
+  cout << nums[1] << "\n";
+  
+}

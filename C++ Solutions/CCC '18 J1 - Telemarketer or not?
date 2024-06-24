@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int p,c,m,d;
+  bool a =false;
+  cin >> p;
+  cin >> c;
+  cin >> m;
+  cin >> d;
+  if (p == 9 or p == 8) {
+    if (c == m) {
+      if (d == 9 or d == 8) {
+        a = true;
+      }
+    }
+  }
+  if (a == true) {
+    cout << "ignore" << endl;
+  } else {
+    cout << "answer" << endl;
+  }
+
+}
